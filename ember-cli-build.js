@@ -1,9 +1,10 @@
-/* eslint-env node */
+'use strict';
+
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
-module.exports = function(defaults) {
-  var app = new EmberAddon(defaults, {
-    'ember-cli-babel': { includePolyfill: true }
+module.exports = function (defaults) {
+  let app = new EmberAddon(defaults, {
+    // Add options here
   });
 
   /*
@@ -13,5 +14,12 @@ module.exports = function(defaults) {
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
 
-  return app.toTree();
+  const { maybeEmbroider } = require('@embroider/test-setup');
+  return maybeEmbroider(app, {
+    skipBabel: [
+      {
+        package: 'qunit',
+      },
+    ],
+  });
 };

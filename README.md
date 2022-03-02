@@ -70,27 +70,20 @@ You may also use in conjunction with the `{{action}}` helper:
 <button {{action (route-action 'updateFoo')}}>Update Foo</button>
 ```
 
-## Compatibility
+Compatibility
+------------------------------------------------------------------------------
 
-This addon will work on Ember versions `1.13.x` and up only, due to use of the new `Helper` implementation.
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
 
-## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Installation
+------------------------------------------------------------------------------
 
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
+```
+ember install ember-route-action-helper
+```
 ## Overriding route-action for integration tests
 
 This helper is designed for use in controller templates, not in
@@ -122,7 +115,13 @@ moduleForComponent('uses-route-action', 'Integration | Component | uses route ac
 
 ## Building
 
-* `ember build`
+* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
+* `ember test`
+* `ember test --server`
+
+
+Usage
+------------------------------------------------------------------------------
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
 
